@@ -1,0 +1,66 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+    padding: 3px;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        place-items: center;
+    }
+
+    #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+    }
+}
+
+/* 1. Target the scrollbar width */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Slim width like your screenshot */
+}
+
+/* 2. Target the Track (the background part) */
+::-webkit-scrollbar-track {
+    background: #000000;
+    /* Matching your black footer/background */
+}
+
+/* 3. Target the Thumb (the white sliding part) */
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    /* Pure white pill */
+    border-radius: 20px;
+    /* Makes it rounded at the ends */
+
+    /* Optional: Adds a little "breathing room" around the pill */
+    border: 2px solid #000000;
+}
+
+/* 4. Handle hover state */
+::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0;
+    /* Slightly grey when hovering */
+}
