@@ -7,7 +7,7 @@
 <!-- Contains the JavaScript logic of the component. -->
 <script setup>
 import { RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue';
+import NavBar from './components/NavBar.vue'
 </script>
 
 <!-- Defines the HTML structure of the component. -->
@@ -22,7 +22,4 @@ import NavBar from './components/NavBar.vue';
 
 <!-- Defines the CSS styles specific to this component (can be scoped or global). -->
 <style>
-body {
-font-family: "Roboto Condensed", sans-serif;
-}
 </style>

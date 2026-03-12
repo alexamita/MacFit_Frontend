@@ -1,66 +1,85 @@
-@import './base.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+:root {
+    /* Palette*/
+    --primary: #C1FF00;
+    /* Electric Lime */
+    --primary-light: #D4FF40;
+    --primary-dark: #9AC000;
+    --secondary: #222222;
+    /* Stealth Gray */
+    --accent: #C1FF00;
+    --accent-2: #FFFFFF;
+
+    /* Neutrals */
+    --bg-base: #0A0A0A;
+    /* Absolute Black */
+    --bg-card: #121212;
+    /* Deep Charcoal */
+    --bg-surface: #1A1A1A;
+    --bg-elevated: #242424;
+    --border: rgba(255, 255, 255, 0.05);
+    --border-light: rgba(255, 255, 255, 0.1);
+
+    /* Text */
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0A0;
+    --text-muted: #666666;
 
 
-#app {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-weight: normal;
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+    --radius-full: 9999px;
 }
 
-a,
-.green {
-    text-decoration: none;
-    color: hsla(160, 100%, 37%, 1);
-    transition: 0.4s;
-    padding: 3px;
+/* Global Typography */
+body {
+    font-family: 'Roboto Condensed', sans-serif !important;
 }
 
-@media (hover: hover) {
-    a:hover {
-        background-color: hsla(160, 100%, 37%, 0.2);
-    }
+/* Navbar Styles */
+.v-app-bar {
+    font-family: 'Oswald', sans-serif !important;
 }
 
-@media (min-width: 1024px) {
-    body {
-        display: flex;
-        place-items: center;
-    }
-
-    #app {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 2rem;
-    }
+.v-btn {
+    font-family: 'Oswald', sans-serif !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
 }
 
-/* 1. Target the scrollbar width */
-::-webkit-scrollbar {
-    width: 8px;
-    /* Slim width like your screenshot */
+.v-btn:hover {
+    color: #ee6909 !important;
+    background-color: transparent !important;
 }
 
-/* 2. Target the Track (the background part) */
-::-webkit-scrollbar-track {
-    background: #000000;
-    /* Matching your black footer/background */
+/* Active Page Indicator (Underline) */
+.v-btn--active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: #ee6909;
+    border-radius: 2px;
 }
 
-/* 3. Target the Thumb (the white sliding part) */
-::-webkit-scrollbar-thumb {
-    background: #ffffff;
-    /* Pure white pill */
-    border-radius: 20px;
-    /* Makes it rounded at the ends */
-
-    /* Optional: Adds a little "breathing room" around the pill */
-    border: 2px solid #000000;
+/* Ensure Logo link doesn't have active underline */
+.v-app-bar-title .router-link-active::after {
+    display: none !important;
 }
 
-/* 4. Handle hover state */
-::-webkit-scrollbar-thumb:hover {
-    background: #e0e0e0;
-    /* Slightly grey when hovering */
+/* Specific styling for the orange Sign Up button */
+.v-btn.bg-primary:hover {
+    background-color: #ff8c33 !important;
+    color: black !important;
+}
+
+/* Navbar Title Styling */
+.v-app-bar-title {
+    letter-spacing: 2px !important;
+    min-width: 250px !important;
 }
